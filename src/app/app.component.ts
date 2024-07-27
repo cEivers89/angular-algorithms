@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { BubbleSortComponent } from "./bubble-sort/bubble-sort.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [BubbleSortComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

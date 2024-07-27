@@ -1,0 +1,17 @@
+<div>
+  <h2>Bubble Sort Example</h2>
+  <label for="arrayInput">Enter numbers (comma separated, max 20):</label>
+  <input id="arrayInput" [(ngModel)]="inputArray" placeholder="e.g., 64, 34, 25, 12" />
+  <button (click)="startSorting()">Start Sorting</button>
+  <button (click)="restartAnimation()">Restart Animation</button>
+  
+  <p><strong>Unsorted Array:</strong> {{ unsortedArray }}</p>
+  <p><strong>Sorted Array (Iteration Count {{ currentIteration }}):</strong></p>
+  <div style="display: flex; margin-bottom: 10px;">
+    <div *ngFor="let num of sortedArray; let i = index" 
+         [style.background-color]="correctPos[i] ? 'darkgreen' : (i === currentJ || i === currentJ + 1 ? 'red' : 'darkgrey')" 
+         style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin: 2px; border: 1px solid black; color: white;">
+      {{ num }}
+    </div>
+  </div>
+</div>
